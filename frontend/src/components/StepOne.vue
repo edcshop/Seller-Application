@@ -111,47 +111,47 @@
     methods: {
       confirmAuth: function () {
         if (this.form.linkAuthored === '0' || this.form.linkAuthored === '') {
-          this.style.checkboxSelect = 'checkbox_select';
-          this.form.linkAuthored = '1';
+          this.style.checkboxSelect = 'checkbox_select'
+          this.form.linkAuthored = '1'
         } else {
-          this.style.checkboxSelect = 'checkbox_unSelect';
-          this.form.linkAuthored = '0';
+          this.style.checkboxSelect = 'checkbox_unSelect'
+          this.form.linkAuthored = '0'
         }
       },
 
       selectHasOnlineStore: function (tag) {
         if (tag === 1) {
-          this.style.radioUnChecked = 'icon_select';
-          this.form.hasOnlineShop = '1';
-          this.style.radioChecked = 'icon_unSelect';
-          this.items_visible = true;
+          this.style.radioUnChecked = 'icon_select'
+          this.form.hasOnlineShop = '1'
+          this.style.radioChecked = 'icon_unSelect'
+          this.items_visible = true
         } else {
-          this.style.radioUnChecked = 'icon_unSelect';
-          this.form.hasOnlineShop = '0';
-          this.style.radioChecked = 'icon_select';
-          this.items_visible = false;
+          this.style.radioUnChecked = 'icon_unSelect'
+          this.form.hasOnlineShop = '0'
+          this.style.radioChecked = 'icon_select'
+          this.items_visible = false
         }
       },
 
       submitForm: function () {
         console.log(this.form)
         if (this.form.firstName === '') {
-          alert('First Name Required!');
-          return;
+          alert('First Name Required!')
+          return
         }
         if (this.form.lastName === '') {
-          alert('Last Name Required!');
-          return;
+          alert('Last Name Required!')
+          return
         }
         if (this.form.category === '0') {
-          alert('Your Shop Category Required!');
-          return;
+          alert('Your Shop Category Required!')
+          return
         }
-        if (this.form.link !== '' && this.form.linkAuthored !== '1'){
-          alert('please confirm that Portfolio Link you submit is authored!');
-          return;
+        if (this.form.link !== '' && this.form.linkAuthored !== '1') {
+          alert('please confirm that Portfolio Link you submit is authored!')
+          return
         }
-        this.$router.push({name: 'StepTwo', params: this.form});
+        this.$router.push({name: 'StepTwo', params: this.form})
       }
     }
   }

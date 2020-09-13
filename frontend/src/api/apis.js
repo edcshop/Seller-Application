@@ -6,14 +6,14 @@ const REQ_INSTANCE = axios.create({
   timeout: 20000,
   header: {
   }
-});
+})
 
 REQ_INSTANCE.apiRequest = function (api, data) {
-  let url = API_URL + api;
-  let queryStr = qs.stringify(data);
+  let url = API_URL + api
+  let queryStr = qs.stringify(data)
   console.log(API_URL, data, queryStr)
   return REQ_INSTANCE.post(url, queryStr)
-};
+}
 
 /**
  * [响应统一处理代码]
@@ -25,7 +25,7 @@ REQ_INSTANCE.interceptors.response.use(response => {
   } else if (response.data.errno !== 0) {
     alert(response.data.errmsg)
   }
-  return response;
+  return response
 }, error => {
   return Promise.reject(error)
 })

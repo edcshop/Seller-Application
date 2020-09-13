@@ -93,28 +93,28 @@
       }
     },
     mounted () {
-      let params = this.$route.params;
-      this.form.firstName = params.firstName;
-      this.form.lastName = params.lastName;
-      this.form.category = params.category;
-      this.form.link = params.link;
-      this.form.linkAuthored = params.linkAuthored;
-      this.form.hasOnlineShop = params.hasOnlineShop;
-      this.form.sellUrls = params.sellUrls;
+      let params = this.$route.params
+      this.form.firstName = params.firstName
+      this.form.lastName = params.lastName
+      this.form.category = params.category
+      this.form.link = params.link
+      this.form.linkAuthored = params.linkAuthored
+      this.form.hasOnlineShop = params.hasOnlineShop
+      this.form.sellUrls = params.sellUrls
     },
     methods: {
       submitData: function () {
-        console.log(this.form);
+        console.log(this.form)
         collectionCreate(this.form).then(data => {
           if (data.data.errno === 0) {
-            this.$router.push('Result');
+            this.$router.push('Result')
           }
         }).catch(error => {
           console.log(error)
         })
       },
       goBack: function () {
-        this.$router.go(-1);
+        this.$router.go(-1)
       }
     }
   }
@@ -244,23 +244,6 @@
   form .fullwidth{
     width: 100%;
   }
-
-  /*form .submit{*/
-    /*float: right;*/
-    /*background: #008980;*/
-    /*border-radius: 4px;*/
-    /*border: none;*/
-    /*order: 0;*/
-    /*color: #ffffff;*/
-    /*margin: 0;*/
-    /*font-style: normal;*/
-    /*font-weight: 600;*/
-    /*font-size: 18px;*/
-    /*line-height: 22px;*/
-    /*width: 152px;*/
-    /*text-align: center;*/
-    /*padding: 13px 56px;*/
-  /*}*/
 
   form .back{
     font-style: normal;
