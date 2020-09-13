@@ -1,4 +1,4 @@
-Backend
+# Backend
 
 ### develop env configure
 +  create database seller , import collection.sql from backend directory
@@ -34,9 +34,8 @@ visit http://127.0.0.1:8360/
 
 
 
-Frontend
+# Frontend
 
-# Seller Application
 
 > A Vue.js project
 
